@@ -1,6 +1,4 @@
-<html>
-
-<head>
+<html><head>
     <title>SuperNet | Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap" rel="stylesheet">
@@ -91,10 +89,34 @@
             width: 951px;
             margin-left: -1px;
         }
+
+        .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+        .speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+        .speech img {float: right; width: 40px }
     </style>
 </head>
 
 <body>
+    <script>
+        function startDictation() {
+        if (window.hasOwnProperty(`webkitSpeechRecognition`)) {
+        var recognition = new webkitSpeechRecognition();
+        continuous = false;
+        interimResults = false;
+        lang = `en-US`;
+        start();
+        onresult = function(e) {
+        getElementById(`transcript`).value
+        = e.results[0][0].transcript;
+        stop();
+        getElementById(`GeekerMagazine`).submit();
+        };
+        onerror = function(e) {
+        stop();
+        }
+        }
+        }
+        </script>
     <div>
         <div class="topbar" style="
     margin-left: -32px;
@@ -122,11 +144,28 @@
 ">
                             <form action="https://google.com/search?q="><input style="
     width: 413px;
-    margin-left: 67px;
+    margin-left: 58px;
     outline: none;
     height: 44px;
     border-radius: 5px 0 0 5px;
     border: none;
+"><button type="submit" style="
+    width: 50;
+    margin-left: 0px;
+    outline: none;
+    height: 44px;
+    /* border-radius: 0 5px 5px 0; */
+    border: none;
+    position: fixed;
+    font-size: 20px;
+    background-color: #fff;
+"><i class="fa fa-search" aria-hidden="true"></i></button><img onclick="startDictation()" src="https://i.imgur.com/cHidSVu.gif" style="
+    position: fixed;
+    margin-left: 50px;
+    margin-top: 0px;
+    background-color: white;
+    height: 44px;
+    border-radius: 0 5px 5px 0;
 "></form>
 
                         </div>
@@ -151,8 +190,7 @@
                                     <h3 style="
     color: #737373;
     font-weight: 200;
-">Article Of The Week</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/finance/?FORM=pgbar1"
-                                        target="_self" h="ID=SERP,5032.1" style="
+">Article Of The Week</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/finance/?FORM=pgbar1" target="_self" h="ID=SERP,5032.1" style="
     color: black;
 ">Blah Blah</a>
                                 </div>
@@ -173,8 +211,7 @@
                                     <h3 style="
     color: #737373;
     font-weight: 200;
-">Its Here</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/editors-picks/travel?q=budget+travel+advice&amp;form=pgbar2"
-                                        target="_self" h="ID=SERP,5033.1" style="
+">Its Here</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/editors-picks/travel?q=budget+travel+advice&amp;form=pgbar2" target="_self" h="ID=SERP,5033.1" style="
     color: black;
 ">Welcome To SuperNet</a>
                                 </div>
@@ -208,12 +245,10 @@
 ">Weekly Vote</a></li>
                                         <li style="
     margin-right: 9px;
-"><a href="/web/20120507042749/http://www.bing.com/search?q=Kentucky+Derby&amp;FORM=Z9LH9" target="_self"
-                                                h="ID=SERP,5035.1" style="
+"><a href="/web/20120507042749/http://www.bing.com/search?q=Kentucky+Derby&amp;FORM=Z9LH9" target="_self" h="ID=SERP,5035.1" style="
     color: black;
 "> Whats New</a></li>
-                                        <li><a href="/web/20120507042749/http://www.bing.com/search?q=Cotto+vs+Mayweather&amp;FORM=Z9LH10"
-                                                target="_self" h="ID=SERP,5036.1" style="
+                                        <li><a href="/web/20120507042749/http://www.bing.com/search?q=Cotto+vs+Mayweather&amp;FORM=Z9LH10" target="_self" h="ID=SERP,5036.1" style="
     color: black;
     /* color: black; */
 ">Take A Tour</a></li>
@@ -228,8 +263,7 @@
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
 ">
-                            <a href="https://commons.wikimedia.org/wiki/File:Macro,_Pink_Flowers_-_panoramio.jpg"><img
-                                    class="info" src="/images/cc.png"></a>
+                            <a href="https://commons.wikimedia.org/wiki/File:Macro,_Pink_Flowers_-_panoramio.jpg"><img class="info" src="/images/cc.png"></a>
                         </div>
                     </div>
                 </div>
@@ -255,6 +289,6 @@
 
 
 
-</body>
 
-</html>
+
+</body></html>
