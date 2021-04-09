@@ -1,10 +1,14 @@
-<html><head>
+<html>
+
+<head>
     <title>SuperNet | Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background-color: #b2bdc4;
@@ -90,33 +94,54 @@
             margin-left: -1px;
         }
 
-        .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
-        .speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
-        .speech img {float: right; width: 40px }
+        .speech {
+            border: 1px solid #DDD;
+            width: 300px;
+            padding: 0;
+            margin: 0
+        }
+
+        .speech input {
+            border: 0;
+            width: 240px;
+            display: inline-block;
+            height: 30px;
+            font-size: 14px;
+        }
+
+        .speech img {
+            float: right;
+            width: 40px
+        }
     </style>
 </head>
 
 <body>
     <script>
+
         function startDictation() {
-        if (window.hasOwnProperty(`webkitSpeechRecognition`)) {
-        var recognition = new webkitSpeechRecognition();
-        continuous = false;
-        interimResults = false;
-        lang = `en-US`;
-        start();
-        onresult = function(e) {
-        getElementById(`transcript`).value
-        = e.results[0][0].transcript;
-        stop();
-        getElementById(`GeekerMagazine`).submit();
-        };
-        onerror = function(e) {
-        stop();
+
+            if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+                var recognition = new webkitSpeechRecognition();
+
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = "en-US";
+                recognition.start();
+
+                recognition.onresult = function (e) {
+                    document.getElementById('transcript').value = e.results[0][0].transcript;
+                    recognition.stop();
+                    document.getElementById('labnol').submit();
+                };
+                recognition.onerror = function (e) {
+                    recognition.stop();
+                }
+            }
         }
-        }
-        }
-        </script>
+
+    </script>
     <div>
         <div class="topbar" style="
     margin-left: -32px;
@@ -154,19 +179,13 @@
     margin-left: 0px;
     outline: none;
     height: 44px;
-    /* border-radius: 0 5px 5px 0; */
+    border-radius: 0 5px 5px 0;
     border: none;
     position: fixed;
     font-size: 20px;
     background-color: #fff;
-"><i class="fa fa-search" aria-hidden="true"></i></button><img onclick="startDictation()" src="https://i.imgur.com/cHidSVu.gif" style="
-    position: fixed;
-    margin-left: 50px;
-    margin-top: 0px;
-    background-color: white;
-    height: 44px;
-    border-radius: 0 5px 5px 0;
-"></form>
+    color: #9a9a9a;
+"><i class="fa fa-search" aria-hidden="true"></i></button></form>
 
                         </div>
                         <div class="quick">
@@ -190,9 +209,10 @@
                                     <h3 style="
     color: #737373;
     font-weight: 200;
-">Article Of The Week</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/finance/?FORM=pgbar1" target="_self" h="ID=SERP,5032.1" style="
+">Article Of The Week</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/finance/?FORM=pgbar1"
+                                        target="_self" h="ID=SERP,5032.1" style="
     color: black;
-">Blah Blah</a>
+">Article Here</a>
                                 </div>
                                 <div style="
     text-align: left;
@@ -211,9 +231,9 @@
                                     <h3 style="
     color: #737373;
     font-weight: 200;
-">Its Here</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/editors-picks/travel?q=budget+travel+advice&amp;form=pgbar2" target="_self" h="ID=SERP,5033.1" style="
+">It's Here</h3><a href="about" target="_self" h="ID=SERP,5033.1" style="
     color: black;
-">Welcome To SuperNet</a>
+">About SuperNet</a>
                                 </div>
                                 <div class="ps" style="
     text-align: left;
@@ -240,18 +260,19 @@
                                         <li style="
     color: black;
     margin-right: 9px;
-"><a href="/web/20120507042749/http://www.bing.com/search?q=Eli+Manning&amp;FORM=Z9LH8" style="
+"><a href="vote" style="
     color: black;
 ">Weekly Vote</a></li>
                                         <li style="
     margin-right: 9px;
-"><a href="/web/20120507042749/http://www.bing.com/search?q=Kentucky+Derby&amp;FORM=Z9LH9" target="_self" h="ID=SERP,5035.1" style="
+"><a href="whatsnew" target="_self" h="ID=SERP,5035.1" style="
     color: black;
 "> Whats New</a></li>
-                                        <li><a href="/web/20120507042749/http://www.bing.com/search?q=Cotto+vs+Mayweather&amp;FORM=Z9LH10" target="_self" h="ID=SERP,5036.1" style="
+                                        <li><a href="https://student-zone.netlify.app/supernet" target="_blank"
+                                                h="ID=SERP,5036.1" style="
     color: black;
     /* color: black; */
-">Take A Tour</a></li>
+">SuperNet For Students</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -263,7 +284,8 @@
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
 ">
-                            <a href="https://commons.wikimedia.org/wiki/File:Macro,_Pink_Flowers_-_panoramio.jpg"><img class="info" src="/images/cc.png"></a>
+                            <a href="https://commons.wikimedia.org/wiki/File:Macro,_Pink_Flowers_-_panoramio.jpg"><img
+                                    class="info" src="/images/cc.png"></a>
                         </div>
                     </div>
                 </div>
@@ -291,4 +313,10 @@
 
 
 
-</body></html>
+
+
+
+
+</body>
+
+</html>
