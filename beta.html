@@ -17,8 +17,7 @@
 
         .topbar {
             color: white;
-            background-size: cover;
-            border-bottom: 1px #bac3c8 solid;
+            background: url(/images/k.png) 0 -361px;
             height: 20px;
         }
 
@@ -32,12 +31,12 @@
         }
 
         .fader {
-            background: url(/web/20091101142131im_/http://www.bing.com/fd/s/a/k.png) 0 -132px;
+            background: url(/images/k.png) 0 -361px;
             position: absolute;
             width: 100%;
             height: 35px;
-            min-width: 700px;
-            top: 0px;
+            min-width: 1190px;
+            z-index: -34;
         }
 
         a {
@@ -85,19 +84,24 @@
         .quick {
             background-color: #d0d9dd;
             height: 74px;
-            margin-top: 510px;
+            margin-top: 287px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            width: 950px;
-            margin-left: 0px;
+            width: 951px;
+            margin-left: -1px;
         }
     </style>
 </head>
 
 <body>
     <div>
-        <div class="topbar">
+        <div class="topbar" style="
+    margin-left: -32px;
+    /* margin-top: 2px; */
+    padding-top: 1px;
+">
+            <div class="fader"></div>
             <ul>
                 <li><a href="apps">Apps</a></li>
                 <li>|</li>
@@ -106,12 +110,26 @@
                 <li><a href="more">More From SuperNet</a></li>
             </ul>
         </div>
-        <div class="fader"></div>
+
         <center>
             <div id="content" class="content">
                 <div class="border">
                     <div class="inside">
+                        <div id="search&amp;logo" style="margin-left: -531px;margin-top: 88px;">
 
+                            <img src="/images/Logoblack.png" style="
+    width: auto;
+">
+                            <form action="https://google.com/search?q="><input style="
+    width: 413px;
+    margin-left: 67px;
+    outline: none;
+    height: 44px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+"></form>
+
+                        </div>
                         <div class="quick">
                             <div id="sw_pb" style="
     margin-top: -9px;
@@ -133,10 +151,10 @@
                                     <h3 style="
     color: #737373;
     font-weight: 200;
-">In the money?</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/finance/?FORM=pgbar1"
+">Article Of The Week</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/finance/?FORM=pgbar1"
                                         target="_self" h="ID=SERP,5032.1" style="
     color: black;
-">Take stock of your finances</a>
+">Blah Blah</a>
                                 </div>
                                 <div style="
     text-align: left;
@@ -155,10 +173,10 @@
                                     <h3 style="
     color: #737373;
     font-weight: 200;
-">Shoestring budget</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/editors-picks/travel?q=budget+travel+advice&amp;form=pgbar2"
+">Its Here</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/editors-picks/travel?q=budget+travel+advice&amp;form=pgbar2"
                                         target="_self" h="ID=SERP,5033.1" style="
     color: black;
-">How to travel on the cheap</a>
+">Welcome To SuperNet</a>
                                 </div>
                                 <div class="ps" style="
     text-align: left;
@@ -218,6 +236,8 @@
             </div>
         </center>
     </div>
+
+
 
 
 
