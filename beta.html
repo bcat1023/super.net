@@ -1,4 +1,6 @@
-<html><head>
+<html>
+
+<head>
     <title>SuperNet | Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap" rel="stylesheet">
@@ -114,51 +116,55 @@
 </head>
 
 <body>
-    <script>
-
-        function startDictation() {
-
-            if (window.hasOwnProperty('webkitSpeechRecognition')) {
-
-                var recognition = new webkitSpeechRecognition();
-
-                recognition.continuous = false;
-                recognition.interimResults = false;
-                recognition.lang = "en-US";
-                recognition.start();
-
-                recognition.onresult = function (e) {
-                    document.getElementById('transcript').value = e.results[0][0].transcript;
-                    recognition.stop();
-                    document.getElementById('labnol').submit();
-                };
-                recognition.onerror = function (e) {
-                    recognition.stop();
-                }
-            }
+    <script>function myFunction() {
+            document.getElementById("lightbox").style.height = "100%";
+            document.getElementById("lightboxsrc").src = "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAAxh5g1UM1RSOVJVMjc5V0ZYVUFXQk4yQkpIVEJRMC4u";
         }
 
+        function closeLightbox() {
+            document.getElementById("lightbox").style.height = "0%";
+            document.getElementById("lightboxsrc").src = "about:blank";
+        }
     </script>
     <div>
-        <div class="topbar" style="
+        <div style="background-color: white;width: 100%;position: fixed;height: 0%;height: 0;margin-left: 0%;transition: all 5s ease 0s;z-index: 100;"
+            id="lightbox"><button style="
+    width: 29px;
+    height: 27px;
+    float: right;
+" onclick="closeLightbox()">x</button><iframe style="
+    width: 93%;
+    margin-top: 30px;
+    /* transition: 5s; */
+    border: none;
+    height: 98%;
+    margin-top: -15px;
+    /* margin: 54px; */
+    margin-left: 54px;
+    margin-right: 54px;
+" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAAxh5g1UM1RSOVJVMjc5V0ZYVUFXQk4yQkpIVEJRMC4u"
+                id="lightboxsrc">
+        </div></iframe>
+    </div>
+    <div class="topbar" style="
     margin-left: -32px;
     /* margin-top: 2px; */
     padding-top: 1px;
 ">
-            <div class="fader"></div>
+        <div class="fader"></div>
 
-        </div>
+    </div>
 
-        <center>
-            <div id="content" class="content">
-                <div class="border">
-                    <div class="inside">
-                        <div id="search&amp;logo" style="margin-left: -531px;margin-top: 88px;">
+    <center>
+        <div id="content" class="content">
+            <div class="border">
+                <div class="inside">
+                    <div id="search&amp;logo" style="margin-left: -531px;margin-top: 88px;">
 
-                            <img src="/images/Logoblack.png" style="
+                        <img src="/images/Logoblack.png" style="
     width: auto;
 ">
-                            <form action="https://google.com/search?q="><input style="
+                        <form action="https://google.com/search?q="><input style="
     width: 413px;
     margin-left: -117px;
     outline: none;
@@ -181,12 +187,12 @@
     color: #9a9a9a;
 "><i class="fa fa-search" aria-hidden="true"></i></button></form>
 
-                        </div>
-                        <div class="quick">
-                            <div id="sw_pb" style="
+                    </div>
+                    <div class="quick">
+                        <div id="sw_pb" style="
     margin-top: -9px;
 ">
-                                <div style="
+                            <div style="
     text-align: left;
     border-collapse: collapse;
     text-indent: initial;
@@ -200,14 +206,15 @@
     text-indent: initial;
     border-spacing: 2px;
 ">
-                                    <h3 style="
+                                <h3 style="
     color: #737373;
     font-weight: 200;
-">Article Of The Week</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/finance/?FORM=pgbar1" target="_self" h="ID=SERP,5032.1" style="
+">Article Of The Week</h3><a href="https://web.archive.org/web/20120507042749/http://www.bing.com/finance/?FORM=pgbar1"
+                                    target="_self" h="ID=SERP,5032.1" style="
     color: black;
 ">Article Here</a>
-                                </div>
-                                <div style="
+                            </div>
+                            <div style="
     text-align: left;
     border-collapse: collapse;
     text-indent: initial;
@@ -221,14 +228,14 @@
     text-indent: initial;
     border-spacing: 2px;
 ">
-                                    <h3 style="
+                                <h3 style="
     color: #737373;
     font-weight: 200;
 ">It's Here</h3><a href="about" target="_self" h="ID=SERP,5033.1" style="
     color: black;
 ">About SuperNet</a>
-                                </div>
-                                <div class="ps" style="
+                            </div>
+                            <div class="ps" style="
     text-align: left;
     border-collapse: collapse;
     text-indent: initial;
@@ -242,46 +249,49 @@
     text-indent: initial;
     border-spacing: 2px;
 ">
-                                    <h3 style="
+                                <h3 style="
     color: #737373;
     font-weight: 200;
 ">Popular now</h3>
-                                    <ul style="
+                                <ul style="
     margin-left: -41px;
     color: black;
 ">
-                                        <li style="
+                                    <li style="
     color: black;
     margin-right: 9px;
-"><a href="vote" style="
+"><a style="
     color: black;
-">Weekly Vote</a></li>
-                                        <li style="
+    cursor: pointer;
+" onclick="myFunction()">Weekly Vote</a></li>
+                                    <li style="
     margin-right: 9px;
 "><a href="radio" target="_self" h="ID=SERP,5035.1" style="
     color: black;
 "> SuperNet Radio</a></li>
-                                        <li><a href="https://student-zone.netlify.app/supernet" target="_blank" h="ID=SERP,5036.1" style="
+                                    <li><a href="https://student-zone.netlify.app/supernet" target="_blank"
+                                            h="ID=SERP,5036.1" style="
     color: black;
     /* color: black; */
 ">SuperNet For Students</a></li>
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
                         </div>
-                        <div class="info" style="
+                    </div>
+                    <div class="info" style="
     margin-top: -114px;
     margin-left: 910px;
     /* white-space: nowrap; */
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
 ">
-                            <a href="https://commons.wikimedia.org/wiki/File:Macro,_Pink_Flowers_-_panoramio.jpg"><img class="info" src="/images/cc.png"></a>
-                        </div>
+                        <a href="https://commons.wikimedia.org/wiki/File:Macro,_Pink_Flowers_-_panoramio.jpg"><img
+                                class="info" src="/images/cc.png"></a>
                     </div>
                 </div>
             </div>
-        </center>
+        </div>
+    </center>
     </div>
 
 
@@ -316,4 +326,6 @@
 
 
 
-</body></html>
+</body>
+
+</html> 
