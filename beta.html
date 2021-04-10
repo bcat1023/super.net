@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             background-color: #b2bdc4;
@@ -127,12 +125,8 @@
         }
     </script>
     <div>
-        <div style="background-color: white;width: 100%;position: fixed;height: 0%;height: 0;margin-left: 0%;transition: all 5s ease 0s;z-index: 100;"
-            id="lightbox"><button style="
-    width: 29px;
-    height: 27px;
-    float: right;
-" onclick="closeLightbox()">x</button><iframe style="
+        <div style="background-color: white; width: 100%; position: fixed; height: 0%; margin-left: 0%; transition: all 2s cubic-bezier(0, 1.26, 0.55, 1.04) 0s; z-index: 100;"
+            id="lightbox"><iframe style="
     width: 93%;
     margin-top: 30px;
     /* transition: 5s; */
@@ -142,9 +136,22 @@
     /* margin: 54px; */
     margin-left: 54px;
     margin-right: 54px;
-" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAAxh5g1UM1RSOVJVMjc5V0ZYVUFXQk4yQkpIVEJRMC4u"
-                id="lightboxsrc">
-        </div></iframe>
+" src="about:blank" id="lightboxsrc">
+        </div></iframe><button style="
+    width: 29px;
+    height: inherit;
+    float: right;
+    max-height: 27px;
+    z-index: 9999999;
+    border: none;
+    outline: none;
+    background: url(/images/k.png) 0 -361px;
+    /* margin-top: -14px; */
+    position: inherit;
+    /* transition: 3s; */
+    right: 0px;
+    bottom: 0pc;
+" onclick="closeLightbox()">x</button>
     </div>
     <div class="topbar" style="
     margin-left: -32px;
@@ -326,6 +333,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 </body>
 
-</html> 
+</html>
