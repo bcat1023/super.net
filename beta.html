@@ -170,14 +170,71 @@ transform: rotateY(
     bottom: 0pc;
 " onclick="closeLightbox()">&times;</button>
         </div>
+    </center>
+
+
+    <script>
+        function openSponsor() {
+
+            document.getElementById("vote").style.transform = "rotateY(0deg)translate(51%,-50%)";
+            document.getElementById("voteSrc").src = "https://fieldgames.netlify.app/sponsor.html";
+        }
+
+        function closeSponsor() {
+
+            document.getElementById("vote").style.transform = "rotateY(90deg)translate(51%,-50%)";
+            document.getElementById("voteSrc").src = "about:blank";
+        }
+    </script>
+    <center>
+        <div>
+            <div style="background-color: white;
+    width: 500px;
+    position: absolute;
+top: 50%; right: 50%;
+transform: rotateY(
+90deg
+)translate(51%,-50%);
+    height: 535px;
+    z-index: 100;
+    transition: all 0.5s ease 0s;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 54px;
+    display: block;" id="vote"><iframe style="
+    width: 100%;
+    /* margin-top: 30px; */
+    transition: 5s;
+    border: none;
+    height: 101%;
+    margin-top: 0px;
+    /* margin: 54px; */
+    margin-left: 0%;
+    margin-right: 0;
+" src="about:blank" id="voteSrc">
+            </div></iframe><button style="
+    width: 29px;
+    height: inherit;
+    float: right;
+    max-height: 27px;
+    z-index: 9999999;
+    border: none;
+    outline: none;
+    background: url(/images/k.png) 0 -361px;
+    /* margin-top: -14px; */
+    position: inherit;
+    transition: 3s;
+    right: 0px;
+    transition-delay: -13s;
+    bottom: 0pc;
+" onclick="closeSponsor()">&times;</button>
+        </div>
         <div class="topbar" style="
     margin-left: -32px;
     /* margin-top: 2px; */
     padding-top: 1px;
 ">
     </center>
-    <div class="fader"></div>
-
     </div>
 
     <center>
@@ -256,9 +313,9 @@ transform: rotateY(
                                 <h3 style="
     color: #737373;
     font-weight: 200;
-">It's Here</h3><a href="about" target="_self" h="ID=SERP,5033.1" style="
+">Check This Out</h3><a onclick="openSponsor()" target="_self" h="ID=SERP,5033.1" style="
     color: black;
-">About SuperNet</a>
+">Field Game Studios</a>
                             </div>
                             <div class="ps" style="
     text-align: left;
@@ -277,7 +334,7 @@ transform: rotateY(
                                 <h3 style="
     color: #737373;
     font-weight: 200;
-">Popular now</h3>
+">Apps</h3>
                                 <ul style="
     margin-left: -41px;
     color: black;
